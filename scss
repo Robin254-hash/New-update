@@ -1,0 +1,35 @@
+---
+---
+/* 1. IMPORT ROBOTO FROM GOOGLE FONTS */
+@import url('https://googleapis.com');
+
+/* 2. OVERRIDE THE PRIMARY BODY FONT VARIABLE */
+$sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$global-font-family: $sans-serif;
+
+/* 3. IMPORT THE THEME */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; 
+@import "minimal-mistakes";
+
+/* 4. REDUCE BASE FONT SIZE & ADD CUSTOM BACKGROUND */
+html {
+  font-size: 15px; /* Shrinks the base/small text slightly from the 16px default */
+}
+
+body {
+  /* Replace 'your-background-image.jpg' with your actual image filename or URL */
+  background-image: url('/assets/images/bkg.jpg'); 
+  
+  /* These rules make sure the background stays fixed and stretches to fill the screen nicely */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Optional: If your background is dark, this makes the main content container slightly see-through or solid white so text is readable */
+.initial-content, .page__inner-wrap {
+  background: rgba(255, 255, 255, 0.95); /* Adjust opacity here if needed */
+  padding: 20px;
+  border-radius: 4px;
+}
